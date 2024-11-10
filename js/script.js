@@ -13,11 +13,9 @@ const DomElement = function(selector, height, width, bg, fsz) {
         let elem
         if (selector[0] === '.') {
             elem = document.createElement('div')
-            elem.innerHTML = '<div></div>'
             elem.classList.add(selector.slice(1))
         } else if (selector[0] === '#') {
             elem = document.createElement('p')
-            elem.innerHTML = '<p></p>'
             elem.id = (selector);
         }
         elem.textContent = "Привет, я любой текст";
