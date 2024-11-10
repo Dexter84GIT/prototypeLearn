@@ -8,12 +8,15 @@ const DomElement = function(selector, height, width, bg, fsz) {
     this.width = width;
     this.bg = bg;
     this.fsz = fsz;
+
     this.createElement = function () {
-        let elem = document.createElement('div');
+        let elem
         if (selector[0] === '.') {
+            elem = document.createElement('div')
             elem.innerHTML = '<div></div>'
             elem.classList.add(selector.slice(1))
         } else if (selector[0] === '#') {
+            elem = document.createElement('p')
             elem.innerHTML = '<p></p>'
             elem.id = (selector);
         }
@@ -28,6 +31,7 @@ const DomElement = function(selector, height, width, bg, fsz) {
     };
 }
 
-const newElem = new DomElement("#id", "50px", "100%", "#ff7800", "30px");
+const newElem = new DomElement(".p", "50px", "100%", "#ff7800", "30px");
+
 
 container.appendChild(newElem.createElement());
