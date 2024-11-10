@@ -8,7 +8,6 @@ const DomElement = function(selector, height, width, bg, fsz) {
     this.width = width;
     this.bg = bg;
     this.fsz = fsz;
-
     this.createElement = function () {
         let elem = document.createElement('div');
         if (selector[0] === '.') {
