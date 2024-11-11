@@ -31,5 +31,22 @@ const DomElement = function(selector, height, width, bg, fsz) {
 
 const newElem = new DomElement(".p", "50px", "100%", "#ff7800", "30px");
 
-
 container.appendChild(newElem.createElement());
+
+
+class First {
+    constructor() {
+
+    } 
+    hello() {
+        console.log('Привет я метод родителя!')
+    }
+}
+class Second extends First {
+    
+}
+
+const link = new Second()
+link.hello()
+console.log('А я наследуемый метод!')
+
